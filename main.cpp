@@ -61,9 +61,12 @@ int main() {
 
 	// Instruction 3 - add 3 elements to the vs vector
 	// expanded code to push back 3 elements to the vi vector
+	vs.push_back("Michael");
+	vs.push_back("C++");
+	vs.push_back("Shoot Me Now!");
 
 	// display the 3 elements in the vd vector
-	cout << "\nValues in vd: \n";
+	cout << "\nValues in vd vector: \n";
 	for (double vals : vd) {
 		cout << vals << endl;
 	}
@@ -73,17 +76,24 @@ int main() {
 	}
 
 	// display the 3 elements in the vd vector
-	cout << "\nValues in vi: \n";
+	cout << "\nValues in vi vector: \n";
 	for(int vals : vi){
 		cout << vals << endl;
 	}
-	
 	cout << "\nAnother way to print values of vi vector: " << endl;
 	for (int i = 0; i < vi.size(); i++){
 		cout << vi[i] << endl;
 	}
 
 	// display the 3 elements in the vs vector
+	cout << "\nValues in vs vector: \n";
+	for(string vals : vs){
+		cout << vals << endl;
+	}
+	cout << "\nAnother way to print values of vs vector: " << endl;
+	for(int i = 0; i < vs.size(); i++){
+		cout << vs[i] << endl;
+	}
 
 	/****Section_Name***Vector_as_Class_Member*/
 	// Credit https://www.geeksforgeeks.org/passing-vector-constructor-c/
