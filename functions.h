@@ -18,7 +18,14 @@
 #include <string>
 
 using namespace std;
+/********************************************************************
+ *                      FUNCTION PROTOTYPE
+ *********************************************************************/
+void displayVector();
 
+/********************************************************************
+ *                      CLASS DEFINITION
+ *********************************************************************/
 //Credit https://www.geeksforgeeks.org/passing-vector-constructor-c/ clarifications added
 class MyClassVector1 
 { 
@@ -39,5 +46,7 @@ class MyClassVector1
       } 
 };
 
-
+/********************************************************************
+ *                      FUNCTION DEFINITION
+ *********************************************************************/
 #endif

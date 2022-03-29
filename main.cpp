@@ -1,18 +1,38 @@
-//Dr_T Unit 2 COSC-1437 Starter 
-/* Task -
+/********************************************************************
+ *  Assignment: Unit 2
+ *  Title:      C++ Standard Library
+ *  Student:    Michael Nguyen
+ *  Teacher:    Tyson McMillan
+ *  Date:       03/25/2022
+ *
+ *  Description: This program has three vectors already made for user.
+ *		User is asked to manipulate the data and add three elements and
+ *		display elements to screen. The goal of the assigment is to give
+ *		us hands on coding using vector templates from the C++ Standard 
+ *	
+ *
+ *********************************************************************/
 
-Top level solution folder: C_STL_Library_YourLastName
-
-create a single main.cpp that contains code samples and implementations of each of the following topics */
-
+/********************************************************************
+ *	Dr_T Unit 2 COSC-1437 Starter 
+ *	
+ *	Task: To create a single main.cpp that contains code samples and 
+ *		implementations of each of the following topics.
+ *
+ *	Top level solution folder: C_STL_Library_YourLastName 
+ *********************************************************************/
 #include <iostream>
 #include <vector>
 #include "functions.h"
 #include "Input_Validation_Extended.h"
 #include <algorithm> 
+
 #include <string>
 using namespace std; 
 
+/********************************************************************
+ *                      MAIN FUNCTION
+ *********************************************************************/
 int main() 
 {
     /****Section_Name***Vectors*/ 
@@ -23,11 +43,16 @@ int main()
 
     //Expand this code to:
 
-    //add 3 elements to the vd vector
+    //Instruction 1 - add 3 elements to the vd vector
     vd.push_back(1);
     vd.push_back(2);
     vd.push_back(3);
     vd.push_back(55.4); 
+
+		//expanded code to push back 3 elements to the vd vector
+		vd.push_back(35);
+		vd.push_back(72);
+		vd.push_back(13);
 
     //add 3 elements to the vi vector
 
