@@ -77,35 +77,75 @@ int main() {
 
 	// display the 3 elements in the vd vector
 	cout << "\nValues in vi vector: \n";
-	for(int vals : vi){
+	for (int vals : vi) {
 		cout << vals << endl;
 	}
 	cout << "\nAnother way to print values of vi vector: " << endl;
-	for (int i = 0; i < vi.size(); i++){
+	for (int i = 0; i < vi.size(); i++) {
 		cout << vi[i] << endl;
 	}
 
 	// display the 3 elements in the vs vector
 	cout << "\nValues in vs vector: \n";
-	for(string vals : vs){
+	for (string vals : vs) {
 		cout << vals << endl;
 	}
 	cout << "\nAnother way to print values of vs vector: " << endl;
-	for(int i = 0; i < vs.size(); i++){
+	for (int i = 0; i < vs.size(); i++) {
 		cout << vs[i] << endl;
 	}
 
+	cout << endl << endl;
+
+	// Instruction 4:
+	/********************************************************************
+	 *	Combine the 3 class examples from the geeksforgeeks site into one
+	 *	program, and instantiate the respective classes in one program
+	 *	within in main().  You simple duty: combine these three working
+	 *	programs into one working program. Where GeekForGeek calls the
+	 *	first example "MyClass", you call it "MyClassVector1" ...
+	 *	MyClassVector2, so that all of your examples can be on one file.
+	 *	Give GeekForGeek credit in the comments.
+	 *
+	 *	Note:
+	 *		The default access modifier in C++ is private. That is, if
+	 *		you do not declare member variables as private, the compiler
+	 *		will assume private.
+	 *********************************************************************/
 	/****Section_Name***Vector_as_Class_Member*/
 	// Credit https://www.geeksforgeeks.org/passing-vector-constructor-c/
 
-	cout << "\nVector_as_Class_Member" << endl;
-	vector<int> vec;
+	// Instanting obj1 of type MyClassVector1 and printing elements on screen
+	cout << "The elements inside MyClassVector 1: " << endl;
+	vector<int> vec1;
 	for (int i = 1; i <= 5; i++)
-		vec.push_back(i);
-	MyClassVector1 obj(vec);
-	obj.print();
+		vec1.push_back(i);
+	MyClassVector1 obj1(vec1);
+	obj1.print();
+
+	cout << endl << endl;
 
 	// Continue with MyClassVector2 and MyClassVector3
+
+	// Instanting obj2 of type MyClassVector2 and printing elements on screen
+	cout << "The elements inside MyClassVector 2: " << endl;
+	vector<int> vec2;
+	for (int i = 1; i <= 5; i++)
+		vec2.push_back(i);
+	MyClassVector2 obj2(vec2);
+	obj2.print();
+
+	cout << endl << endl;
+
+	// Instanting obj3 of type MyClassVector3 and printing elements on screen
+	cout << "The elements inside MyClassVector 3: " << endl;
+	vector<int> vec3;
+	for (int i = 1; i <= 5; i++)
+		vec3.push_back(i);
+	MyClassVector3 obj3(vec3);
+	obj3.print();
+
+	cout << endl << endl;
 
 	/****Section_Name***STL_Iterators*/
 
