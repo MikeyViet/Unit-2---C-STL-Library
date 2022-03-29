@@ -7,29 +7,11 @@ create a single main.cpp that contains code samples and implementations of each 
 
 #include <iostream>
 #include <vector>
+#include "functions.h"
+#include "Input_Validation_Extended.h"
 #include <algorithm> 
 #include <string>
 using namespace std; 
-
-//Credit https://www.geeksforgeeks.org/passing-vector-constructor-c/ clarifications added
-class MyClassVector1 
-{ 
-  private:  
-      vector<int> vec; 
-  public: 
-      MyClassVector1 (vector<int> v)  //parameterized constructor
-      { 
-        vec = v; 
-      } 
-      void print() 
-      { 
-          /// print the value of vector 
-          for (int i = 0; i < vec.size(); i++) 
-          {
-              cout << vec[i] << " "; 
-          }    
-      } 
-};
 
 int main() 
 {
