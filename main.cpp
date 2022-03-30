@@ -25,16 +25,17 @@
 #include "functions.h"
 #include <algorithm>
 #include <iostream>
-#include <vector>
-
+#include <stdlib.h>
 #include <string>
+#include <time.h>
+#include <vector>
 using namespace std;
 
 /********************************************************************
  *                      MAIN FUNCTION
  *********************************************************************/
 int main() {
-	/****Section_Name***Vectors*/
+	/***************************Vectors***********************************/
 	// Write the base code for: 5. std::vector example
 	vector<double> vd; // vd elments are floating point numbers
 	vector<int> vi;	// vi elements are integer numbers
@@ -112,9 +113,9 @@ int main() {
 	 *		you do not declare member variables as private, the compiler
 	 *		will assume private.
 	 *********************************************************************/
-	/****Section_Name***Vector_as_Class_Member*/
-	// Credit https://www.geeksforgeeks.org/passing-vector-constructor-c/
 
+	/************************Vector_as_Class_Member***********************/
+	// Credit https://www.geeksforgeeks.org/passing-vector-constructor-c/
 	// Instanting obj1 of type MyClassVector1 and printing elements on screen
 	cout << "The elements inside MyClassVector 1: " << endl;
 	vector<int> vec1;
@@ -147,7 +148,32 @@ int main() {
 
 	cout << endl << endl;
 
-	/****Section_Name***STL_Iterators*/
+	/************************STL Iterators********************************/
+	// Expanding the code from the C++ STL pdf to display 10 elements
+
+	vector<int> vInt(10); // declare vector of type int with 10 elements
+	vInt[0] = 23;
+	vInt[1] = 1;
+	vInt[2] = 65;
+	vInt[3] = 287;
+	vInt[4] = 17;
+	vInt[5] = 901;
+	vInt[6] = 7;
+	vInt[7] = 365;
+	vInt[8] = 76;
+	vInt[9] = 33;
+
+	cout << endl;
+
+	// Display the elements of the vector
+	
+	int sizevInt = 0;
+
+	vector<int>::iterator it;
+	for (it = vInt.begin(); it != vInt.end(); ++it) {
+		cout << "The value of the element at index " << sizevInt + 1
+			 << " is " << *it << endl;
+	}
 
 	/****Section_Name*** Stack*/
 
