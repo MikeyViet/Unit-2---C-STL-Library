@@ -26,10 +26,12 @@
 #include <algorithm>
 #include <cassert>
 #include <iostream>
+#include <set>
 #include <stack>
 #include <stdlib.h>
 #include <string>
 #include <time.h>
+#include <utility>
 #include <vector>
 using namespace std;
 
@@ -207,21 +209,66 @@ int main() {
 	// pops off the top element. So the vector should be empty now.
 	st.pop();
 	// The empty() member function of stack checks to see if the stack is empty.
-	// If it is empty, then it returns true. This statement is checking to see if
-	// it is true = empty.
+	// If it is empty, then it returns true. This statement is checking to see
+	// if it is true = empty.
 	assert(st.empty() == true);
 
-	
-	/****Section_Name**** Set*/
+	/*****************************Stack****************************/
 	// Write the code as presented in: 3. std::set
-
 	// Write comments that help one better understand what the code is doing.
+	cout << "\n*****************************Set****************************\n"
+		 << endl;
+	// this creates the set of integers that are unique
+	set<int> iset;
+	// Now we need to populate the iset with values with the insert() function
+	iset.insert(500);
+	iset.insert(23);
+	iset.insert(12);
+	iset.insert(53);
+	iset.insert(6);
+	iset.insert(66);
 
-	/****Section_Name****Pair_Structure*/
+	// The find() is used to find a value in the set. If the value is found, it
+	// will return an iterator to the first element of the range. If it is not
+	// found, it will return the last element. The following statement searches
+	// for a number and inserts it in set if not found.
+	if (iset.find(23) != iset.end()) {
+		iset.insert(23);
+	}
+
+	if (iset.find(45) != iset.end()) {
+		iset.insert(45);
+	}
+	// check the size of the set with size()
+	cout << "\nThe size of the set is: " << iset.size() << endl;
+	// assert(iset.size() == 6);	//this fails because size is 5
+	// assert(iset.size() == 5);	//this passes
+
+	// print out set
+	cout << "\nThe values in the set are: " << endl;
+	set<int>::iterator it2;
+	for (it2 = iset.begin(); it2 != iset.end(); it2++) {
+		cout << *it2 << endl;
+	}
+
+	// looks like the elements in a set are sorted ascending
+
+	/*****************************Pair Structure****************************/
 	// Write the code as presented in: 4. std::pair structure
-
 	// Write comments that help one better understand what the code is doing.
+	cout << "\n************************Pair Structure***********************\n"
+		 << endl;
+	// Structure pair is a container that holds a pair of objects. It will have
+	// an object of one type with an object of another type
 
+	// structure pair of 2 strings
+	pair<string, string> strstr;
+	strstr.first = "Michael";
+	strstr.second = "Nguyen";
+	cout << "\nThe value of strstr.first is " << strstr.first
+		 << " and the value of strstr.second is " << strstr.second << endl;
+
+//structure pair of int and string
 	/****Section_Name**** Map_Insert*/
 	// Write the code as presented in: 14. std::map::insert
 
