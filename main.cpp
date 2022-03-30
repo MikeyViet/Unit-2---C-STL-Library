@@ -36,6 +36,7 @@ using namespace std;
  *********************************************************************/
 int main() {
 	/***************************Vectors***********************************/
+	cout << "*********************Vectors*********************" << endl;
 	// Write the base code for: 5. std::vector example
 	vector<double> vd; // vd elments are floating point numbers
 	vector<int> vi;	// vi elements are integer numbers
@@ -117,6 +118,7 @@ int main() {
 	/************************Vector_as_Class_Member***********************/
 	// Credit https://www.geeksforgeeks.org/passing-vector-constructor-c/
 	// Instanting obj1 of type MyClassVector1 and printing elements on screen
+	cout << "**************Vector as a Class Member**************" << endl << endl;
 	cout << "The elements inside MyClassVector 1: " << endl;
 	vector<int> vec1;
 	for (int i = 1; i <= 5; i++)
@@ -150,7 +152,7 @@ int main() {
 
 	/************************STL Iterators********************************/
 	// Expanding the code from the C++ STL pdf to display 10 elements
-
+	cout << "********************STL Iterators********************" << endl;
 	vector<int> vInt(10); // declare vector of type int with 10 elements
 	vInt[0] = 23;
 	vInt[1] = 1;
@@ -171,7 +173,7 @@ int main() {
 
 	vector<int>::iterator it;
 	for (it = vInt.begin(); it != vInt.end(); ++it) {
-		cout << "The value of the element at index " << sizevInt + 1
+		cout << "The value of the element at index " << ++sizevInt
 			 << " is " << *it << endl;
 	}
 

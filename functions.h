@@ -75,8 +75,7 @@ class MyClassVector3 {
 public:
     // this is the right way to assign
     // the reference of stl container
-    MyClassVector3(vector<int>& arr)
-        : vec(arr)
+    MyClassVector3(vector<int>& arr): vec(arr)
     {
     }
     void print()
