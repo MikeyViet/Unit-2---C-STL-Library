@@ -268,7 +268,23 @@ int main() {
 	cout << "\nThe value of strstr.first is " << strstr.first
 		 << " and the value of strstr.second is " << strstr.second << endl;
 
-//structure pair of int and string
+	// structure pair of integer and string
+	pair<int, string> intstr;
+	intstr.first = 100;					  // store value in integer part
+	intstr.second = "I want this grade!"; // stor value in string part
+	cout << "\nThe value in intstr.first is " << intstr.first
+		 << " and the value in intstr.second is " << intstr.second << "."
+		 << endl;
+
+	// structure pair of string and integer
+	pair<string, int> strint;
+	strint.first = "I want this many hours of sleep";
+	strint.second = 24;
+
+	cout << "\n value in strint.first is: " << strint.first
+		 << " and the value in strint.second is: " << strint.second << "."
+		 << endl;
+
 	/****Section_Name**** Map_Insert*/
 	// Write the code as presented in: 14. std::map::insert
 
