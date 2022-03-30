@@ -24,7 +24,9 @@
 #include "Input_Validation_Extended.h"
 #include "functions.h"
 #include <algorithm>
+#include <cassert>
 #include <iostream>
+#include <stack>
 #include <stdlib.h>
 #include <string>
 #include <time.h>
@@ -118,7 +120,8 @@ int main() {
 	/************************Vector_as_Class_Member***********************/
 	// Credit https://www.geeksforgeeks.org/passing-vector-constructor-c/
 	// Instanting obj1 of type MyClassVector1 and printing elements on screen
-	cout << "**************Vector as a Class Member**************" << endl << endl;
+	cout << "**************Vector as a Class Member**************" << endl
+		 << endl;
 	cout << "The elements inside MyClassVector 1: " << endl;
 	vector<int> vec1;
 	for (int i = 1; i <= 5; i++)
@@ -168,19 +171,47 @@ int main() {
 	cout << endl;
 
 	// Display the elements of the vector
-	
+
 	int sizevInt = 0;
 
 	vector<int>::iterator it;
 	for (it = vInt.begin(); it != vInt.end(); ++it) {
-		cout << "The value of the element at index " << ++sizevInt
-			 << " is " << *it << endl;
+		cout << "The value of the element at index " << ++sizevInt << " is "
+			 << *it << endl;
 	}
 
-	/****Section_Name*** Stack*/
-
+	/****************************Stack***************************/
 	// Write comments that help one better understand what the code is doing.
+	cout << "\n*************************Stack*************************" << endl
+		 << endl;
 
+	stack<int> st;
+
+	st.push(250); // pushing a number on the stack using push() member function
+				  // of stack vector
+
+	// the assert() will compare the argument and display error message if it is
+	// equal to 0 (False) Only one value was placed on stack so the size should
+	// equal to 1 for 1 element on stack
+	assert(st.size() == 1);
+	// The value 250 was only value placed in stack so that would make it the
+	// top of the stack. The top() member function returns the value of the top
+	// element.  This should be true.
+	assert(st.top() == 250);
+	// We are assigning a new value to the top of the stack. Old value is
+	// replaced by new.
+	st.top() = 75;
+	// Since the one value was replaced in the stack, it should be the new top
+	// value. Assert() will return true.
+	assert(st.top() == 75);
+	// pops off the top element. So the vector should be empty now.
+	st.pop();
+	// The empty() member function of stack checks to see if the stack is empty.
+	// If it is empty, then it returns true. This statement is checking to see if
+	// it is true = empty.
+	assert(st.empty() == true);
+
+	
 	/****Section_Name**** Set*/
 	// Write the code as presented in: 3. std::set
 
