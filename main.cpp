@@ -26,6 +26,7 @@
 #include <algorithm>
 #include <cassert>
 #include <iostream>
+#include <map>
 #include <set>
 #include <stack>
 #include <stdlib.h>
@@ -285,10 +286,33 @@ int main() {
 		 << " and the value in strint.second is: " << strint.second << "."
 		 << endl;
 
-	/****Section_Name**** Map_Insert*/
+	/*****************************Map Insert****************************/
 	// Write the code as presented in: 14. std::map::insert
-
 	// Write comments that help one better understand what the code is doing.
+	cout << "\n*****************************Map "
+			"Insert****************************\n";
+	// the insert() enters / inserts new items if they do not exist.
+	typedef map<string, int> MapT;
+	typedef MapT::const_iterator MapIterT;
+
+	// instantiate an amap object
+	MapT amap;
+	// create a structure pair of type iterator and bool
+	pair<MapIterT, bool> result = amap.insert(make_pair("Michael", 45));
+	// check to see if result.second is true
+	assert(result.second == true);
+	// check to see if value of second is 45 being pointed to by the iterator
+	assert(result.first->second == 45);
+
+	// add new elements into the structure pair result
+	result = amap.insert(make_pair("Michael", 54));
+
+	// check to see if second is false
+	assert(result.second == false);
+
+	// check to see if 45 is still there. The key of Michael was already there,
+	// so the 54 did not get inserted into th epari.
+	assert(result.first->second == 45);
 
 	/****Section_Name****Map_Summary*/
 	// Write the code as presented in: 16. Map summary
