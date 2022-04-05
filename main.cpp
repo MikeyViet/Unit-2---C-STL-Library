@@ -36,9 +36,14 @@
 #include <vector>
 using namespace std;
 
+	bool less_than_7(int value)
+	{
+		return value < 7;
+	}
 /********************************************************************
  *                      MAIN FUNCTION
  *********************************************************************/
+
 int main() {
 	/***************************Vectors***********************************/
 	cout << "*********************Vectors*********************" << endl;
@@ -314,41 +319,61 @@ int main() {
 	// so the 54 did not get inserted into th epari.
 	assert(result.first->second == 45);
 
-		/*****************************Map Summary****************************/
+	/*****************************Map Summary****************************/
 	// Write the code as presented in: 16. Map summary
 	// Write comments that help one better understand what the code is doing.
-		cout << "\n*****************************Map "
+	cout << "\n*****************************Map "
 			"Summary****************************\n";
 
-	//creating a map of phone book with pair of strings
-map<string, string>phone_book;
-	//creating first entry
+	// creating a map of phone book with pair of strings
+	map<string, string> phone_book;
+	// creating first entry
 	phone_book["411"] = "Directory";
-	//creating second entry
+	// creating second entry
 	phone_book["911"] = "Emergency";
-	//creating third entry
+	// creating third entry
 	phone_book["508-678-2811"] = "BCC";
-	//find the number 411 and if not in the map, then create the pair and insert
-	if(phone_book.find("411") != phone_book.end()) {
-		phone_book.insert(make_pair(string("411"),string("Directory")));
+	// find the number 411 and if not in the map, then create the pair and
+	// insert
+	if (phone_book.find("411") != phone_book.end()) {
+		phone_book.insert(make_pair(string("411"), string("Directory")));
 	}
-	//check to see if there are three entries in phone book
+	// check to see if there are three entries in phone book
 	assert(phone_book.size() == 3);
-	//using an iterator to go through entries, print out each entry
+	// using an iterator to go through entries, print out each entry
 	map<string, string>::const_iterator it3;
-	for(it3 = phone_book.begin(); it3 != phone_book.end(); ++it3){
+	for (it3 = phone_book.begin(); it3 != phone_book.end(); ++it3) {
 		cout << " " << it3->first << " " << it3->second << endl;
 	}
-	
-	/****Section_Name**** Sort_Algorithm*/
+
+	/*****************************Sort Algorithm****************************/
 	// Write the code as presented in: 23. sort example
-
 	// Write comments that help one better understand what the code is doing.
+	cout << "\n*****************************Sort "
+			"Algorithm****************************\n";
 
-	/****Section_Name****Predicate_Algorithm*/
+	// declare array of 100 elements
+	int arr[100];
+	// sort the array ascending with built in sort
+	sort(arr, arr + 100);
+
+	// declare vector of int
+	vector<int> v1;
+	// sort the vector with built in sort function. This uses the beginning of
+	// vector just like the other function uses the beginning of the arr.  The
+	// second argument is size of vector represented by end().
+	sort(v1.begin(), v1.end());
+
+	/*****************************Predicate Algorithm****************************/
 	// Write the code as presented in: 25. count_if and predicate function
-
 	// Write comments that help one better understand what the code is doing.
+	cout << "\n*****************************Predicate "
+			"Algorithm****************************\n";
 
+	//look at line 39 for function definition of the less_than_7()
+	vector<int>v2;
+	//the function will execute if the arguments are true
+	int count_less = std::count_if(v2.begin(), v2.end(), less_than_7);
+	
 	return 0;
 }
