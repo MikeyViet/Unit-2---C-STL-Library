@@ -314,11 +314,32 @@ int main() {
 	// so the 54 did not get inserted into th epari.
 	assert(result.first->second == 45);
 
-	/****Section_Name****Map_Summary*/
+		/*****************************Map Summary****************************/
 	// Write the code as presented in: 16. Map summary
-
 	// Write comments that help one better understand what the code is doing.
+		cout << "\n*****************************Map "
+			"Summary****************************\n";
 
+	//creating a map of phone book with pair of strings
+map<string, string>phone_book;
+	//creating first entry
+	phone_book["411"] = "Directory";
+	//creating second entry
+	phone_book["911"] = "Emergency";
+	//creating third entry
+	phone_book["508-678-2811"] = "BCC";
+	//find the number 411 and if not in the map, then create the pair and insert
+	if(phone_book.find("411") != phone_book.end()) {
+		phone_book.insert(make_pair(string("411"),string("Directory")));
+	}
+	//check to see if there are three entries in phone book
+	assert(phone_book.size() == 3);
+	//using an iterator to go through entries, print out each entry
+	map<string, string>::const_iterator it3;
+	for(it3 = phone_book.begin(); it3 != phone_book.end(); ++it3){
+		cout << " " << it3->first << " " << it3->second << endl;
+	}
+	
 	/****Section_Name**** Sort_Algorithm*/
 	// Write the code as presented in: 23. sort example
 
